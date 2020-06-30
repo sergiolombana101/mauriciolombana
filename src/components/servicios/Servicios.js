@@ -2,6 +2,7 @@ import React ,{useRef, useEffect} from "react";
 import ReactDOM from 'react-dom'
 import { Cell, Grid} from 'react-foundation';
 import { Typography } from "@material-ui/core";
+import { wrap } from "gsap/gsap-core";
 
 export default class Servicios extends React.Component{
     constructor(props){
@@ -12,11 +13,17 @@ export default class Servicios extends React.Component{
 
     listenForScroll(){
         window.addEventListener('scroll',()=>{
-            if(window.scrollY>1000){
+            if(window.scrollY>870){
                 var body = ReactDOM.findDOMNode(this.body);
                 if(body != null){
                     body.style.transition = '1s';
                     body.style.backgroundColor = '#CEC3C2';
+                }
+            }else{
+                var body = ReactDOM.findDOMNode(this.body);
+                if(body != null){
+                    body.style.transition = '1s';
+                    body.style.backgroundColor = 'white';
                 }
             }
         })
@@ -90,15 +97,16 @@ export default class Servicios extends React.Component{
         },
         cardsGrid:{
             marginTop:'10%',
-            overflowX:'scroll',
-            height:'19em'
+            overflowX:'auto',
+            height:'17em',
+            width:'71em',
+            flexWrap:'initial'
         },
         card:{
             marginLeft:'5%',
             height:'14em',
             backgroundColor:'#3A606E',
             textAlign:'center',
-            display:'inline-block'
         },
         span:{
             color:'white',

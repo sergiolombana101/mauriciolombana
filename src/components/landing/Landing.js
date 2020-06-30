@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import background from '../../assets/img/landing_bg.JPG';
 import facebook from '../../assets/img/logos/facebook-logo.png';
 import instagram from '../../assets/img/logos/instagram-logo.png';
+import glasses from '../../assets/img/logos/glasses.png'
+import hand from '../../assets/img/logos/hand.png'
 import mail from '../../assets/img/logos/mail-logo.png';
 import logo from '../../assets/img/logo.png';
 import { Cell, Grid} from 'react-foundation';
@@ -21,8 +23,12 @@ export default class Landing extends React.Component{
         this.topBar = null;
         this.rightBar = null;
         this.line = null;
+        this.cover = null;
+        this.glasses = null;
+        this.rightCover = null;
         this.state = {
-            rightBarColor : 'black'
+            rightBarColor : 'black',
+            hasComponentChange : false
         }
         this.handleScroll();
 
@@ -31,6 +37,70 @@ export default class Landing extends React.Component{
     }
 
    componentDidMount(){
+       //GLASSES ANIMATION
+       setTimeout(()=>{ //MOVE HORIZONTALLY TO THE RIGHT
+           TweenLite.to(this.glasses,1,{x:400})
+       },800)
+      setTimeout(()=>{ //FIRST CIRCLE -> MOVE UP AND LEFT
+           TweenLite.to(this.handContainer,1,{opacity:1})
+           TweenLite.to(this.handContainer,1,{y:-180})
+           TweenLite.to(this.handContainer,1,{x:-210})
+       },2300)
+       setTimeout(()=>{
+           let hand =  ReactDOM.findDOMNode(this.hand);
+           if(hand != null){
+                hand.style.transition = '2s';
+                hand.style.transform = 'rotate(-90deg)'
+           }
+       },3300)
+       setTimeout(()=>{
+            let hand =  ReactDOM.findDOMNode(this.hand);
+            if(hand != null){
+                hand.style.transition = '2s';
+                hand.style.transform = 'rotate(20deg)'
+            }
+            var cover = ReactDOM.findDOMNode(this.cover);
+            if(cover != null){
+                cover.style.transition = '2s';
+                cover.style.opacity = '0'
+            }
+        },4500)
+        setTimeout(()=>{
+            TweenLite.to(this.handContainer,2,{x:-10})
+        },5000)
+        setTimeout(()=>{
+            let hand =  ReactDOM.findDOMNode(this.hand);
+            if(hand != null){
+                hand.style.transition = '2s';
+                hand.style.transform = 'rotate(90deg)'
+            }
+        },5800)
+        setTimeout(()=>{
+            let hand =  ReactDOM.findDOMNode(this.hand);
+            if(hand != null){
+                hand.style.transition = '2s';
+                hand.style.transform = 'rotate(0deg)'
+            }
+            var rightCover = ReactDOM.findDOMNode(this.rightCover);
+            if(rightCover != null){
+                rightCover.style.transition = '2s';
+                rightCover.style.opacity = '0'
+            }
+        },7000)
+        setTimeout(()=>{
+            let glasses = ReactDOM.findDOMNode(this.glasses);
+            if(glasses!=null){
+                glasses.style.transition = '1s';
+                TweenLite.to(this.glasses,1,{x:970,y:50});
+                TweenLite.to(this.glasses,2,{height:'2em'})
+            }
+            let hand =  ReactDOM.findDOMNode(this.hand);
+            if(hand != null){
+                hand.style.transition = '1s';
+                hand.style.opacity = '0'
+            }
+        },7500)
+
        setTimeout(()=>{
         TweenLite.to(this.firstName,2,{ opacity:1, x: 150,})
         TweenLite.to(this.lastName,2,{opacity:1,x: -270})
@@ -43,7 +113,67 @@ export default class Landing extends React.Component{
        TweenLite.to(this.rightBar,3,{x:846})
    }
 
+   getComponentName = (position) => {
+        /*COMPONENT IS LANDING */
+        if(position > 0 && position < 390){
+            return 'landing'
+        }
+        /*COMPONENT IS PRESENTACION */
+        else if(position>390 && position<870){
+            return 'presentacion'
+        }
+        /*COMPONENT IS SERVICIOS */
+        else if(position>870 && position <1300){
+            return 'servicios'
+        }
+   }
+
    handleScroll = () => {
+        window.addEventListener('scroll',()=>{
+           let component = this.getComponentName(window.scrollY); //It will get which component is visible from the scroll position
+           switch(component){
+               case 'landing':
+                    var elem = ReactDOM.findDOMNode(this.rightBar);
+                    if(elem != null){
+                        elem.style.transition = '2s';
+                        elem.style.top = '0%';
+                        if(this.state.hasComponentChange){
+                            elem.style.left = '1373%';
+                            elem.style.transform = 'rotate(0deg)'
+                            elem.style.backgroundColor = 'black';
+                            elem.style.height = '92.1vh';
+                            elem.style.width = '30%'
+                        }
+                    }
+                    break;
+                case 'presentacion':
+                    this.setState({hasComponentChange:true});
+                    var elem = ReactDOM.findDOMNode(this.rightBar);
+                    if(elem != null){
+                        elem.style.transition = '2s';
+                        elem.style.transform = 'rotate(90deg)'
+                        elem.style.top = '150%';
+                        elem.style.left = '1300%';
+                        elem.style.backgroundColor = '#E24E1B'
+                        elem.style.height = '92.1vh';
+                        elem.style.width = '30%'
+                    }
+                    break;
+                case 'servicios':
+                    this.setState({hasComponentChange:true});
+                    var elem = ReactDOM.findDOMNode(this.rightBar);
+                    if(elem != null){
+                        elem.style.transition = '2s';
+                        elem.style.transform = 'rotate(90deg)'
+                        elem.style.top = '318%';
+                        elem.style.left = '965%';
+                        elem.style.backgroundColor = 'black';
+                        elem.style.height = '59vh';
+                        elem.style.width = '7%'
+                    }
+           }
+       })
+       /*
     let presentacionScroll = false;
     let transitioning = false;
     let fromServicios = false;
@@ -111,7 +241,7 @@ export default class Landing extends React.Component{
             }
             
         }
-    });
+    });*/
   }
 
         
@@ -185,14 +315,7 @@ export default class Landing extends React.Component{
                                         <Typography component="div" style={this.styles.rightSideTopBar}></Typography>
                                     </Cell>
                                 </Grid>
-                                <Grid className="display" style={this.styles.rightSideContainer}>
-                                    <Cell medium={8}>
-                                        <Typography component="div" style={this.styles.logoDiv}>
-                                            <img src={logo}></img>
-                                        </Typography>
-                                    </Cell>
-                                </Grid>
-                                
+              
                                 <Grid className="display" style={this.styles.rightSideBottomBarContainer}>
                                     <Cell medium={12}>
                                         <Typography component="div" style={this.styles.rightSideBottomBar}></Typography>
@@ -232,6 +355,13 @@ export default class Landing extends React.Component{
                             </Cell>
                         </Grid>
                     </Typography>
+                    <div style={this.styles.cover} ref={div=>this.cover = div}>
+                    </div>
+                    <div style={this.styles.rightCover} ref={div=>this.rightCover = div}></div>
+                    <img src={glasses} style={this.styles.glasses} ref={img=>this.glasses = img}></img>
+                    <div ref={div=>this.handContainer = div} style={this.styles.handContainer}>
+                        <img src={hand} style={this.styles.hand} ref={img=>this.hand = img}></img>
+                    </div>
                 </div>
                 
             </React.Fragment>
@@ -451,6 +581,36 @@ export default class Landing extends React.Component{
             position: 'absolute',
             right: '-1em',
             top: '2em'
+        },
+        cover:{
+            height:'100vh',
+            width:'50%',
+            backgroundColor:'#E0E0E0',
+            position:'absolute',
+            top:'0',
+            opacity:'0.8'
+        },
+        glasses:{
+            position:'absolute',
+            top:'35%'
+        },
+        handContainer:{
+            position: 'absolute',
+            top: '68%',
+            left:'57%',
+            opacity:'0'
+        },
+        hand:{
+            height:'7em',
+        },
+        rightCover:{
+            height:'100vh',
+            width:'47%',
+            backgroundColor:'#E0E0E0',
+            position:'absolute',
+            left:'52.5%',
+            opacity:'0.8',
+            top:'0'
         }
         
     }
