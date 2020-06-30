@@ -14,7 +14,7 @@ export default class Presentacion extends React.Component{
 
     listenForScroll(){
         window.addEventListener('scroll',()=>{
-            if(window.scrollY>290){
+            if(window.scrollY>290 && window.scrollY < 870){
                 var elem = ReactDOM.findDOMNode(this.body);
                 var span = ReactDOM.findDOMNode(this.descSpan);
                 if(elem != null){
@@ -24,7 +24,7 @@ export default class Presentacion extends React.Component{
                     span.style.color = 'white';
                 }
             }
-            if(window.scrollY<290){
+            if(window.scrollY<290 || window.scrollY > 870){
                 var elem = ReactDOM.findDOMNode(this.body);
                 var span = ReactDOM.findDOMNode(this.descSpan);
                 if(elem != null){
