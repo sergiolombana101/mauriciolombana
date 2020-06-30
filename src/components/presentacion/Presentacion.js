@@ -91,12 +91,13 @@ export default class Presentacion extends React.Component{
             
         },
         presentacionDiv:{
-            marginLeft:'5%',
+            marginLeft:'15%',
             marginTop:'12%'
         },
         presentacionImg:{
             borderTopRightRadius:'3em',
-            borderBottomRightRadius:'3em'
+            borderBottomRightRadius:'3em',
+            height: '28em'
         },
         acercaDiv:{
             width: '7em',

@@ -291,9 +291,14 @@ export default class Landing extends React.Component{
                                     </Grid>
 
                                     <Grid className="display" style={this.styles.lastNameWrap}>
-                                        <Cell medium={6} style={this.styles.lastNameContainer}>
+                                        <Cell medium={5} style={this.styles.lastNameContainer}>
                                             <Typography component="span" style={this.styles.lastNameSpan} ref={span=>this.lastName = span}>
                                                 Lombana
+                                            </Typography>
+                                        </Cell>
+                                        <Cell medium={1} style={{marginTop:'12.5%'}}>
+                                            <Typography component="span" style={{color:'black',fontSize:'2em',fontFamily:'RockWell',letterSpacing:'0.07em'}}>
+                                                O.D
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -420,7 +425,7 @@ export default class Landing extends React.Component{
             marginTop:'19vh'
         },
         credentialsContainer:{
-            marginTop:'17vh',
+            marginTop:'5vh',
             marginLeft:'16%'
         },
         credentialsSpan:{
