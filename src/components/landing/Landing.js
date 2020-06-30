@@ -12,7 +12,8 @@ import logo from '../../assets/img/logo.png';
 import { Cell, Grid} from 'react-foundation';
 import {TweenMax, Power3, TweenLite} from "gsap";
 import IronImage from '../../assets/libs/IronImage';
-import { requirePropFactory } from "@material-ui/core";
+
+import ScriptTag from 'react-script-tag';
 
 
 export default class Landing extends React.Component{
@@ -37,6 +38,12 @@ export default class Landing extends React.Component{
     }
 
    componentDidMount(){
+        const script = document.createElement('script');
+
+        script.src = "../../assets/js/CssPlugin.js";
+        script.async = true;
+    
+        document.body.appendChild(script);
        //GLASSES ANIMATION
        setTimeout(()=>{ //MOVE HORIZONTALLY TO THE RIGHT
            TweenLite.to(this.glasses,1,{x:400})
