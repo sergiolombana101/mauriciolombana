@@ -38,20 +38,15 @@ export default class Landing extends React.Component{
     }
 
    componentDidMount(){
-        const script = document.createElement('script');
 
-        script.src = "../../assets/js/CssPlugin.js";
-        script.async = true;
-    
-        document.body.appendChild(script);
        //GLASSES ANIMATION
        setTimeout(()=>{ //MOVE HORIZONTALLY TO THE RIGHT
-           TweenLite.to(this.glasses,1,{x:400})
+           TweenMax.to(this.glasses,1,{x:400})
        },800)
       setTimeout(()=>{ //FIRST CIRCLE -> MOVE UP AND LEFT
-           TweenLite.to(this.handContainer,1,{opacity:1})
-           TweenLite.to(this.handContainer,1,{y:-180})
-           TweenLite.to(this.handContainer,1,{x:-210})
+           TweenMax.to(this.handContainer,1,{opacity:1})
+           TweenMax.to(this.handContainer,1,{y:-180})
+           TweenMax.to(this.handContainer,1,{x:-210})
        },2300)
        setTimeout(()=>{
            let hand =  ReactDOM.findDOMNode(this.hand);
@@ -73,7 +68,7 @@ export default class Landing extends React.Component{
             }
         },4500)
         setTimeout(()=>{
-            TweenLite.to(this.handContainer,2,{x:-10})
+            TweenMax.to(this.handContainer,2,{x:-10})
         },5000)
         setTimeout(()=>{
             let hand =  ReactDOM.findDOMNode(this.hand);
@@ -98,8 +93,8 @@ export default class Landing extends React.Component{
             let glasses = ReactDOM.findDOMNode(this.glasses);
             if(glasses!=null){
                 glasses.style.transition = '1s';
-                TweenLite.to(this.glasses,1,{x:970,y:50});
-                TweenLite.to(this.glasses,2,{height:'2em'})
+                TweenMax.to(this.glasses,1,{x:970,y:50});
+                TweenMax.to(this.glasses,2,{height:'2em'})
             }
             let hand =  ReactDOM.findDOMNode(this.hand);
             if(hand != null){
@@ -109,15 +104,15 @@ export default class Landing extends React.Component{
         },7500)
 
        setTimeout(()=>{
-        TweenLite.to(this.firstName,2,{ opacity:1, x: 150,})
-        TweenLite.to(this.lastName,2,{opacity:1,x: -270})
-        TweenLite.to(this.line,1,{opacity:1})
+        TweenMax.to(this.firstName,2,{ opacity:1, x: 150,})
+        TweenMax.to(this.lastName,2,{opacity:1,x: -270})
+        TweenMax.to(this.line,1,{opacity:1})
         setTimeout(()=>{
-            TweenLite.to(this.rightBar,1,{width:'30%'})
+            TweenMax.to(this.rightBar,1,{width:'30%'})
         },1400)
        },1900)
-       TweenLite.to(this.topBar,2,{y: -458.5})
-       TweenLite.to(this.rightBar,3,{x:846})
+       TweenMax.to(this.topBar,2,{y: -458.5})
+       TweenMax.to(this.rightBar,3,{x:846})
    }
 
    getComponentName = (position) => {
