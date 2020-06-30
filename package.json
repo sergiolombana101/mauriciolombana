@@ -12,7 +12,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "foundation-sites": "^6.6.3",
-    "gsap": "^3.2.6",
+    "gsap": "^3.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-foundation": "^0.9.6",
@@ -20,10 +20,10 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "heroku-postbuild": "npm run build"   
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
