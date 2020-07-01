@@ -19,7 +19,8 @@ export default class Servicios extends React.Component{
                     body.style.transition = '1s';
                     body.style.backgroundColor = '#CEC3C2';
                 }
-            }else{
+            }
+            if(window.scrollY<870 || window.scrollY > 1400){
                 var body = ReactDOM.findDOMNode(this.body);
                 if(body != null){
                     body.style.transition = '1s';
@@ -52,7 +53,7 @@ export default class Servicios extends React.Component{
                                 </Cell>
                                 <Cell medium={2} style={this.styles.card}>
                                     <div style={this.styles.span2Container}>
-                                    <Typography component="span" style={this.styles.span2}>Adaptación de Lentes de Contacto Para Miopia, Astimagtismo, Hipermetropia, Queratocono y Presbicia</Typography>
+                                    <Typography component="span" style={this.styles.span2}>Adaptación de Lentes de Contacto </Typography>
                                     </div>
                                 </Cell>
                                 <Cell medium={2} style={this.styles.card}>
@@ -116,11 +117,11 @@ export default class Servicios extends React.Component{
         span2:{
             color:'white',
             fontFamily: 'RockWell',
-            fontSize:'1.5vw'
+            fontSize:'2vw'
         },
         span2Container:{
             width:'12em',
-            marginTop:'5%'
+            marginTop:'20%'
         },
         span1Container:{
             marginTop:'20%'

@@ -128,6 +128,9 @@ export default class Landing extends React.Component{
         else if(position>870 && position <1300){
             return 'servicios'
         }
+        else if(position > 1400 && position< 1950){
+            return 'productos'
+        }
    }
 
    handleScroll = () => {
@@ -173,77 +176,21 @@ export default class Landing extends React.Component{
                         elem.style.height = '59vh';
                         elem.style.width = '7%'
                     }
+                    break;
+                case 'productos':
+                    this.setState({hasComponentChange:true});
+                    var elem = ReactDOM.findDOMNode(this.rightBar);
+                    if(elem != null){
+                        elem.style.height = '63vh';
+                        elem.style.width = '504%';
+                        elem.style.transform = 'rotate(0deg)';
+                        elem.style.top = '502%';
+                        elem.style.left = '340%';
+                        elem.style.backgroundColor = '#30292F';
+                    }
            }
        })
-       /*
-    let presentacionScroll = false;
-    let transitioning = false;
-    let fromServicios = false;
-    window.addEventListener('scroll',()=>{
-        console.log(window.scrollY);
-        if(window.scrollY>290 && window.scrollY <1000){
-            if(!transitioning){
-                if(fromServicios){
-                    //TweenLite.to(this.rightBar,1,{y:1030});
-                    //fromServicios = false;
-                }else{
-                    TweenLite.to(this.rightBar,1,{top:'148%'})
-                    TweenLite.to(this.rightBar,1,{left:'0%'})
-                }
-                transitioning = true;
-                TweenLite.to(this.rightBar,1,{rotation:90, transformOrigin:"left 50%"});
-                setTimeout(()=>{
-                    var elem = ReactDOM.findDOMNode(this.rightBar);
-                    if(elem != null){
-                        elem.style.backgroundColor = '#E24E1B';
-                        presentacionScroll = true;
-                    }
-                },1000)
-                setTimeout(()=>{
-                    transitioning = false;
-                },500)
-            }
-        }
-        if(window.scrollY<290){
-            if(!transitioning){
-                transitioning = true;
-                TweenLite.to(this.rightBar,2,{top:'0%'})
-                TweenLite.to(this.rightBar,1,{rotate:0})
-                if(fromServicios){
-                    //TweenLite.to(this.rightBar,1,{x:846})
-                   // fromServicios = false;
-                }
-                setTimeout(()=>{
-                    var elem = ReactDOM.findDOMNode(this.rightBar);
-                    if(elem != null){
-                        elem.style.backgroundColor = 'black';
-                        elem.style.width = '45%';
-                        elem.style.height = '92.1vh'; 
-                    }
-                    transitioning = false;
-                },1000)
-           }
-        }
-        if(window.scrollY>1000){
-            fromServicios = true;
-            if(!transitioning){
-            transitioning = true;
-            TweenLite.to(this.rightBar,1,{top:"344%"});
-            TweenLite.to(this.rightBar,1,{left:'-417%'})
-            TweenLite.to(this.rightBar,1,{width:"3%"});
-            //TweenLite.to(this.rightBar,1,{width:'5%'})
-            var elem = ReactDOM.findDOMNode(this.rightBar);
-            if(elem != null){
-                    elem.style.height = '55vh';
-                    elem.style.backgroundColor = 'black';
-            }
-            setTimeout(()=>{
-                transitioning = false;
-            },500)
-            }
-            
-        }
-    });*/
+
   }
 
         
@@ -296,8 +243,8 @@ export default class Landing extends React.Component{
                                                 Lombana
                                             </Typography>
                                         </Cell>
-                                        <Cell medium={1} style={{marginTop:'12.5%'}}>
-                                            <Typography component="span" style={{color:'black',fontSize:'2em',fontFamily:'RockWell',letterSpacing:'0.07em'}}>
+                                        <Cell medium={1} style={{marginTop:'11.2%'}}>
+                                            <Typography component="span" style={{color:'black',fontSize:'3em',fontFamily:'RockWell',letterSpacing:'0.07em'}}>
                                                 O.D
                                             </Typography>
                                         </Cell>
@@ -355,6 +302,11 @@ export default class Landing extends React.Component{
                                         <Cell medium={3} style={this.styles.address}>
                                             <Typography component="span" style={this.styles.addressSpan}>
                                                 Cl. 64 ##7 89, Bogotá
+                                            </Typography>
+                                        </Cell>
+                                        <Cell medium={3} style={this.styles.phoneNumber}>
+                                            <Typography component="span" style={this.styles.phoneSpan}>
+                                                2557276
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -425,7 +377,7 @@ export default class Landing extends React.Component{
             marginTop:'19vh'
         },
         credentialsContainer:{
-            marginTop:'5vh',
+            marginTop:'4vh',
             marginLeft:'16%'
         },
         credentialsSpan:{
@@ -496,6 +448,15 @@ export default class Landing extends React.Component{
             color: 'rgba(192,192,192,0.7)',
             fontSize: '1.5em',
             fontFamily:'RockWell'
+        },
+        phoneSpan:{
+            color: 'rgba(192,192,192,0.7)',
+            fontSize: '1.5em',
+            fontFamily:'RockWell'
+        },
+        phoneNumber:{
+            marginLeft:'68%',
+            marginTop:'-4%' 
         },
         logoDiv:{
             marginLeft: '60%',
