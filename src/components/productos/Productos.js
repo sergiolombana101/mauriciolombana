@@ -14,13 +14,14 @@ export default class Productos extends React.Component{
 
     listenForScroll(){
         window.addEventListener('scroll',()=>{
-           if(window.scrollY>1400){
+           if(window.scrollY>1400 && window.scrollY < 2180){
             let body = ReactDOM.findDOMNode(this.body);
             if(body!=null){
                 body.style.transition = '1s';
                 body.style.backgroundColor = '#3F4045';
             }
-           }else{
+           }
+           if(window.scrollY<1400 || window.scrollY > 2180 ){
             let body = ReactDOM.findDOMNode(this.body);
             if(body!=null){
                 body.style.transition = '1s';

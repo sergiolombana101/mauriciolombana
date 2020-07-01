@@ -116,6 +116,7 @@ export default class Landing extends React.Component{
    }
 
    getComponentName = (position) => {
+       console.log(position); //2180 2600
         /*COMPONENT IS LANDING */
         if(position > 0 && position < 390){
             return 'landing'
@@ -130,6 +131,9 @@ export default class Landing extends React.Component{
         }
         else if(position > 1400 && position< 1950){
             return 'productos'
+        }
+        else if(position > 2180 && position < 2600){
+            return 'alianzas'
         }
    }
 
@@ -148,6 +152,7 @@ export default class Landing extends React.Component{
                             elem.style.backgroundColor = 'black';
                             elem.style.height = '92.1vh';
                             elem.style.width = '30%'
+                            elem.style.border = 'none';
                         }
                     }
                     break;
@@ -162,6 +167,7 @@ export default class Landing extends React.Component{
                         elem.style.backgroundColor = '#E24E1B'
                         elem.style.height = '92.1vh';
                         elem.style.width = '30%'
+                        elem.style.border = 'none';
                     }
                     break;
                 case 'servicios':
@@ -175,6 +181,7 @@ export default class Landing extends React.Component{
                         elem.style.backgroundColor = 'black';
                         elem.style.height = '59vh';
                         elem.style.width = '7%'
+                        elem.style.border = 'none';
                     }
                     break;
                 case 'productos':
@@ -187,6 +194,20 @@ export default class Landing extends React.Component{
                         elem.style.top = '502%';
                         elem.style.left = '340%';
                         elem.style.backgroundColor = '#30292F';
+                        elem.style.border = 'none';
+                    }
+                    break;
+                case 'alianzas':
+                    this.setState({hasComponentChange:true});
+                    var elem = ReactDOM.findDOMNode(this.rightBar);
+                    if(elem != null){
+                        elem.style.height = '63vh';
+                        elem.style.width = '200%';
+                        elem.style.transform = 'rotate(90deg)';
+                        elem.style.top = '607%';
+                        elem.style.left = '886%';
+                        elem.style.backgroundColor = 'transparent';
+                        elem.style.border = '2px solid white';
                     }
            }
        })

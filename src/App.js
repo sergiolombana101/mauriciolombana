@@ -5,6 +5,7 @@ import Landing from "./components/landing/Landing";
 import Presentacion from './components/presentacion/Presentacion';
 import Servicios from './components/servicios/Servicios';
 import Productos from './components/productos/Productos';
+import Alianzas from './components/alianzas/Alianzas';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Presentacion></Presentacion>
     <Servicios></Servicios>
     <Productos></Productos>
+    <Alianzas></Alianzas>
     </>
   );
 }
