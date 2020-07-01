@@ -46,7 +46,93 @@ export default class Productos extends React.Component{
                             <img src={productos} style={this.styles.image}></img>
                         </Cell>
                         <Cell medium={7} style={this.styles.listCell}>
-                            
+                            <Grid className="display" style={this.styles.lineGrid}>
+                                <Cell medium={1} style={this.styles.lineCell}>
+                                    <Typography component="span" style={this.styles.lineSpan}>
+                                        <Typography component="span" style={this.styles.identifier1}></Typography>
+                                    </Typography>
+                                </Cell>
+                                <Cell medium={10} style={this.styles.listContentCell}>
+                                    <Grid className="display">
+                                        <Cell medium={12}>
+                                            <Typography component="span" style={this.styles.listOption1}>
+                                                Lentes Oftalmologicos
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Transitions 8 Generación y Fotocromaticos
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Blue Protect (Bloqueador de luces azules nocivas) 
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Antireflejo y Crizal 
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Policarbonato Asferico
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Progresivos Digitales
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Bifocales
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>`
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Futurex
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>`
+
+                                </Cell>
+                            </Grid>
                         </Cell>
                     </Grid>
                 </div>
@@ -82,6 +168,53 @@ export default class Productos extends React.Component{
             width: '30em',
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
             marginLeft: '47%'
+        },
+        lineGrid:{
+            marginLeft:'4%',
+            marginTop:'4%',
+            overflow: 'auto',
+            height: '19em',
+            width: '27em'
+        },
+        lineCell:{
+            display: 'contents',
+        },
+        lineSpan:{
+            backgroundColor:'#707070',
+            height: '23em',
+            width: '.2em',
+            marginLeft:'1%'
+        },
+        identifier1:{
+            height:'.8em',
+            width: '.8em',
+            borderRadius:'50%',
+            backgroundColor:'orange',
+            display: 'inline-block',
+            position: 'relative',
+            left: '-136%'
+        },
+        listOption1:{
+            fontFamily: 'RockWell',
+            color:'white'
+        },
+        listContentCell:{
+            marginLeft: '5%'
+        },
+        identifier:{
+            height:'.8em',
+            width: '.8em',
+            borderRadius:'50%',
+            backgroundColor:'orange',
+            display: 'inline-block',
+            position: 'relative',
+            left: '-96.3%'
+        },
+        listOption:{
+            fontFamily: 'RockWell',
+            color:'white',
+            position: 'relative',
+            right: '9%'
         }
 
     }
