@@ -12,6 +12,7 @@ import logo from '../../assets/img/logo.png';
 import { Cell, Grid} from 'react-foundation';
 import {TweenMax, Power3, TweenLite} from "gsap";
 import IronImage from '../../assets/libs/IronImage';
+import whatsapp from '../../assets/img/what.png'
 
 import ScriptTag from 'react-script-tag';
 
@@ -194,7 +195,7 @@ export default class Landing extends React.Component{
                     if(elem != null){
                         elem.style.transition = '2s';
                         elem.style.transform = 'rotate(90deg)'
-                        elem.style.top = '150%';
+                        elem.style.top = '153%';
                         elem.style.left = '1300%';
                         elem.style.backgroundColor = '#E24E1B'
                         elem.style.height = '92.1vh';
@@ -347,14 +348,18 @@ export default class Landing extends React.Component{
                             <Cell medium={8}>
                                 <Typography component="div" style={this.styles.contactDiv}>
                                     <Grid className="display" style={this.styles.workContactContainer}>
-                                        <Cell medium={3} style={this.styles.workContact}>
+                                        <Cell medium={4} style={this.styles.workContact}>
                                             <Typography component="span" style={this.styles.workContactSpan}>
-            	                                Únidad Medica Diagnostica<br></br> Espinosa Goméz
+            	                                Cl. 64 #7 89, Bogota, Colombia<br></br>Únidad Medica Diagnostica<br></br> Espinosa Goméz
                                             </Typography>
                                         </Cell>
                                         <Cell medium={3} style={this.styles.address}>
                                             <Typography component="span" style={this.styles.addressSpan}>
-                                                Cl. 64 ##7 89, Bogotá
+                                                provision24@hotmail.com
+                                            </Typography>
+                                            <img src={whatsapp} style={{height:'1.5vw', marginTop:'-1%'}}></img>
+                                            <Typography component="span" style={this.styles.whatsapp}>
+                                                3108664214
                                             </Typography>
                                         </Cell>
                                         <Cell medium={3} style={this.styles.phoneNumber}>
@@ -437,10 +442,16 @@ export default class Landing extends React.Component{
             marginTop:'4vh',
             marginLeft:'16%'
         },
+        credentialsCell:{
+            maxHeight: '8vw',
+            overflow: 'auto'
+        },
         credentialsSpan:{
             color: 'black',
             fontSize: '1.3vw',
-            fontFamily: 'RockWell'
+            fontFamily: 'RockWell',
+            lineHeight: '137%',
+            display: 'block'
         },
         lastNameWrap:{
             position:'relative',
@@ -483,7 +494,7 @@ export default class Landing extends React.Component{
         },
         lineSpan:{
             width: '85%',
-            height: '.5vh',
+            height: '15%',
             backgroundColor: 'yellow',
             display: 'inline-block',
             opacity: '0'
@@ -494,26 +505,30 @@ export default class Landing extends React.Component{
         },
         workContactSpan:{
             color: 'white',
-            fontSize: '2vw',
-            fontFamily:'RockWell'
+            fontSize: '1.5vw',
+            fontFamily:'RockWell',
+            display: 'block',
+            lineHeight: '135%'
         },
         address:{
-            marginLeft: '40%',
+            marginLeft: '28%',
             marginTop: '2%'
         },
         addressSpan:{
             color: 'rgba(192,192,192,0.7)',
-            fontSize: '2vw',
-            fontFamily:'RockWell'
+            fontSize: '1.5vw',
+            fontFamily:'RockWell',
+            display: 'block',
+            lineHeight: '135%'
         },
         phoneSpan:{
             color: 'rgba(192,192,192,0.7)',
-            fontSize: '2vw',
+            fontSize: '1.5vw',
             fontFamily:'RockWell'
         },
         phoneNumber:{
-            marginLeft:'68%',
-            marginTop:'-4%' 
+            marginLeft:'64%',
+            marginTop:'-2%' 
         },
         logoDiv:{
             marginLeft: '60%',
@@ -638,6 +653,12 @@ export default class Landing extends React.Component{
             left:'52.5%',
             opacity:'0.8',
             top:'0'
+        },
+        whatsapp:{
+            color: 'rgba(192,192,192,0.7)',
+            fontFamily: 'RockWell',
+            marginLeft: '5%',
+            fontSize:'1.5vw'
         }
         
     }

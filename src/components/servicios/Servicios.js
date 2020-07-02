@@ -68,12 +68,22 @@ export default class Servicios extends React.Component{
                                 </Cell>
                                 <Cell medium={2} style={this.styles.card}>
                                     <div style={this.styles.span1Container}>
-                                    <Typography component="span" style={this.styles.span}>Adaptación de Gafas para Deporte con Formula</Typography>
+                                    <Typography component="span" style={this.styles.span}>Adaptación de Gafas de Sol con Formula</Typography>
                                     </div>
                                 </Cell>
                                 <Cell medium={2} style={this.styles.card}>
                                     <div style={this.styles.span1Container}>
-                                    <Typography component="span" style={this.styles.span}>Adaptación de Gafas para Deporte con Formula</Typography>
+                                    <Typography component="span" style={this.styles.span3}>Examenes Espaciales para Determinar Percepcion de Color y de Estereopsis</Typography>
+                                    </div>
+                                </Cell>
+                                <Cell medium={2} style={this.styles.card}>
+                                    <div style={this.styles.span3Container}>
+                                    <Typography component="span" style={this.styles.span}>Alianzas para Cirugia</Typography>
+                                    </div>
+                                </Cell>
+                                <Cell medium={2} style={this.styles.card}>
+                                    <div style={this.styles.span4Container}>
+                                    <Typography component="span" style={this.styles.span3}>Refractiva, Pterigios, Cataratas y Demas Procedimientos Oculares</Typography>
                                     </div>
                                 </Cell>
             
@@ -99,32 +109,51 @@ export default class Servicios extends React.Component{
         cardsGrid:{
             marginTop:'10%',
             overflowX:'auto',
-            height:'17em',
-            width:'71em',
+            height:'75%',
+            width:'94%',
             flexWrap:'initial'
         },
         card:{
             marginLeft:'5%',
-            height:'14em',
+            height:'88%',
             backgroundColor:'#3A606E',
             textAlign:'center',
         },
         span:{
             color:'white',
             fontFamily: 'RockWell',
-            fontSize:'2vw'
+            fontSize:'2vw',
+            display: 'block',
+            lineHeight: '145%'
         },
         span2:{
             color:'white',
             fontFamily: 'RockWell',
-            fontSize:'2vw'
+            fontSize:'2vw',
+            display: 'block',
+            lineHeight: '145%'
+        },
+        span3:{
+            color:'white',
+            fontFamily: 'RockWell',
+            fontSize:'1.5vw',
+            display: 'block',
+            lineHeight: '145%'
         },
         span2Container:{
-            width:'12em',
+            width:'100%',
             marginTop:'20%'
         },
         span1Container:{
             marginTop:'20%'
+        },
+        span3Container:{
+            marginTop: '40%'
+        },
+        span4Container:{
+            marginTop: '20%',
+            width: '14vw',
+            marginLeft: '2%'
         }
 
     }

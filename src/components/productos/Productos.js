@@ -130,7 +130,87 @@ export default class Productos extends React.Component{
                                                 Lentes Futurex
                                             </Typography>
                                         </Cell>
-                                    </Grid>`
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes en Alto Indice
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes de Contacto
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes de Contacto Blandos Desechables
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes de Contacto Blandos Toricos Desechables
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes de Contacto Blandos Tradicionales
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes de Contacto Blandos cosmeticos
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Gas Permeables de Media y Alta Permebealidad
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'4%'}}>
+                                        <Cell medium={1}>
+                                            <Typography component="span" style={this.styles.identifier}></Typography>
+                                        </Cell>
+                                        <Cell medium={11}>
+                                            <Typography component="span" style={this.styles.listOption}>
+                                                Lentes Gas Permeables Espaciales
+                                            </Typography>
+                                        </Cell>
+                                    </Grid>
 
                                 </Cell>
                             </Grid>
@@ -155,7 +235,7 @@ export default class Productos extends React.Component{
             position:'absolute'
         },
         image:{
-            height:'22em'
+            height:'28vw'
         },
         imagenGrid:{
             marginTop:'7%'
@@ -165,8 +245,8 @@ export default class Productos extends React.Component{
             marginLeft:'14%'
         },
         listCell:{
-            height: '22em',
-            width: '30em',
+            height: '28vw',
+            width: '37vw',
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
             marginLeft: '47%'
         },
@@ -174,8 +254,8 @@ export default class Productos extends React.Component{
             marginLeft:'4%',
             marginTop:'4%',
             overflow: 'auto',
-            height: '19em',
-            width: '27em'
+            height: '25vw',
+            width: '32vw'
         },
         lineCell:{
             display: 'contents',
@@ -197,7 +277,8 @@ export default class Productos extends React.Component{
         },
         listOption1:{
             fontFamily: 'RockWell',
-            color:'white'
+            color:'white',
+            fontSize: '1.3vw'
         },
         listContentCell:{
             marginLeft: '5%'
@@ -215,7 +296,8 @@ export default class Productos extends React.Component{
             fontFamily: 'RockWell',
             color:'white',
             position: 'relative',
-            right: '9%'
+            right: '9%',
+            fontSize: '1.3vw'
         }
 
     }

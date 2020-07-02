@@ -182,7 +182,7 @@ export default class Alianzas extends React.Component{
                            </div>
                        </Cell>
                        <Cell medium={8} style={{marginTop:'-4%'}}>
-                           <img src={glasses} style={{height:'34em'}}></img>
+                           <img src={glasses} style={{height:'42.5vw'}}></img>
                            <div style={this.styles.leftImageContainer} ref={div=>this.leftImageContainer = div}>
                                <img style={this.styles.leftImage} src={this.state.leftImage}></img>
                            </div>
@@ -227,15 +227,15 @@ export default class Alianzas extends React.Component{
         leftArrowContainer:{
             marginLeft:'45%',
             backgroundColor: 'white',
-            height: '4em',
-            width: '5em',
+            height: '5vw',
+            width: '7vw',
             borderRadius: '1em',
             cursor: 'pointer'
         },
         rightArrowContainer:{
             backgroundColor: 'white',
-            height: '4em',
-            width: '5em',
+            height: '5vw',
+            width: '7vw',
             borderRadius: '1em',
             cursor: 'pointer'
         },
@@ -244,31 +244,35 @@ export default class Alianzas extends React.Component{
             top:'25%',
             left:'11%',
             transform: 'rotate(180deg)',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            height: '2.5vw',
+            display:'block'
         },
         leftArrow:{
             position:'relative',
             top:'25%',
             left:'11%',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            height: '2.5vw',
+            display:'block'
         },
         leftImageContainer:{
             position: 'absolute',
             top: '438%',
-            width: '11.5em',
+            width: '14.2vw',
             left:'33%',       
         },
         leftImage: {
-           height:"12.2em"
+           height:"15.2vw"
         },
         rightImageContainer:{
             position: 'absolute',
             top: '438.5%',
-            width: '11.5em',
+            width: '14.2vw',
             left:'52.5%',  
         },
         rightImage:{
-            height: "12em"
+            height: "15.2vw"
         },
         alianzaSpan:{
             fontFamily: 'RockWell',

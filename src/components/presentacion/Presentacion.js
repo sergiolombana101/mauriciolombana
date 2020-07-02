@@ -58,7 +58,7 @@ export default class Presentacion extends React.Component{
                             </Grid>
                             <Grid className="display" style={this.styles.acercaFirstDescGrid}>
                                 <Cell medium={9}>
-                                    <Typography component="span" style={{fontFamily:'RockWell', fontSize: '1.3vw'}} ref={span=>this.descSpan = span}>
+                                    <Typography component="span" style={{fontFamily:'RockWell', fontSize: '1.3vw', display: 'block', lineHeight: '135%'}} ref={span=>this.descSpan = span}>
                                         Optometra con mas de 25 años de experiencia en practica clinica ,
                                         nuestros altos estandares de etica  nos permiten manejar su salud
                                          visual con el profesionalismo que sus ojos se merecen. 
@@ -67,7 +67,7 @@ export default class Presentacion extends React.Component{
                             </Grid>
                             <Grid className="display" style={this.styles.acercaSecondDescGrid}>
                                 <Cell medium={9} style={{height:'22vw',overflow:'auto'}}>
-                                    <Typography component="span" style={{fontFamily:'RockWell', color:'grey', fontSize: '1.3vw'}}>
+                                    <Typography component="span" style={{fontFamily:'RockWell', color:'grey', fontSize: '1.3vw', lineHeight:'2%', display: 'block', lineHeight: '135%'}}>
                                         Nuestra experiencia nos permiten solucionar los casos en donde
                                         los defectos de refraccion (hipermetropia,astigmatismo,miopia,
                                         presbicia) disminuyan la vision o que generen sintomas como dolor
@@ -111,7 +111,8 @@ export default class Presentacion extends React.Component{
             left:'6%',
             top:'9%',
             fontFamily: 'RockWell',
-            fontSize:'1.3vw'
+            fontSize:'1.3vw',
+            display: 'block'
         },
         acercaFirstDescGrid:{
             marginTop:'5%',
