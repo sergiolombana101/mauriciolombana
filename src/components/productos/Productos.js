@@ -34,7 +34,7 @@ export default class Productos extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <div style={{height: '100vh', width:'100%', border:'2em solid #E0E0E0'}} ref={div=>this.body = div}>
+                <div style={{height: '100vh', width:'100%', border:'2.5vw solid #E0E0E0'}} ref={div=>this.body = div}>
                     <Grid className="display" style={this.styles.productosGrid}>
                         <Cell medium={4} style={this.styles.productosCell}>
                             <Typography component="span" style={this.styles.productosSpan}>

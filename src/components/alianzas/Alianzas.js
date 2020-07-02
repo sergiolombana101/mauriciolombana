@@ -167,7 +167,7 @@ export default class Alianzas extends React.Component{
     render(){
         return (
             <React.Fragment>
-               <div style={{height: '100vh', width:'100%', border:'2em solid #E0E0E0'}} ref={div=>this.body = div}>
+               <div style={{height: '100vh', width:'100%', border:'2.5vw solid #E0E0E0'}} ref={div=>this.body = div}>
                    <Grid className="display" style={{marginTop:'4%'}}>
                        <Cell medium={4} style={{marginLeft:'37%'}}>
                            <Typography component="span" style={this.styles.alianzaTitle}>

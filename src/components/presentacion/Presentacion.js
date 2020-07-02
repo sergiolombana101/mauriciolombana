@@ -41,7 +41,7 @@ export default class Presentacion extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div style={{height: '100vh', width:'100%', border:'2em solid #E0E0E0'}} ref={div=>this.body = div}>
+                <div style={{height: '100vh', width:'100%', border:'2.5vw solid #E0E0E0'}} ref={div=>this.body = div}>
                     <Grid className="display" style={this.styles.presentacionGrid}>
                         <Cell medium={6}>
                             <div style={this.styles.presentacionDiv}>
@@ -58,7 +58,7 @@ export default class Presentacion extends React.Component{
                             </Grid>
                             <Grid className="display" style={this.styles.acercaFirstDescGrid}>
                                 <Cell medium={9}>
-                                    <Typography component="span" style={{fontFamily:'RockWell'}} ref={span=>this.descSpan = span}>
+                                    <Typography component="span" style={{fontFamily:'RockWell', fontSize: '1.3vw'}} ref={span=>this.descSpan = span}>
                                         Optometra con mas de 25 años de experiencia en practica clinica ,
                                         nuestros altos estandares de etica  nos permiten manejar su salud
                                          visual con el profesionalismo que sus ojos se merecen. 
@@ -66,8 +66,8 @@ export default class Presentacion extends React.Component{
                                 </Cell>
                             </Grid>
                             <Grid className="display" style={this.styles.acercaSecondDescGrid}>
-                                <Cell medium={9}>
-                                    <Typography component="span" style={{fontFamily:'RockWell', color:'grey'}}>
+                                <Cell medium={9} style={{height:'22vw',overflow:'auto'}}>
+                                    <Typography component="span" style={{fontFamily:'RockWell', color:'grey', fontSize: '1.3vw'}}>
                                         Nuestra experiencia nos permiten solucionar los casos en donde
                                         los defectos de refraccion (hipermetropia,astigmatismo,miopia,
                                         presbicia) disminuyan la vision o que generen sintomas como dolor
@@ -97,12 +97,12 @@ export default class Presentacion extends React.Component{
         presentacionImg:{
             borderTopRightRadius:'3em',
             borderBottomRightRadius:'3em',
-            height: '28em'
+            height: '35vw'
         },
         acercaDiv:{
-            width: '7em',
-            height: '2em',
-            backgroundColor: '#654236',
+            width: '9vw',
+            height: '2.5vw',
+            backgroundColor: '#E24E1B',
             borderRadius: '.4em'
         },
         acercaSpan:{
@@ -110,7 +110,8 @@ export default class Presentacion extends React.Component{
             color:'white',
             left:'6%',
             top:'9%',
-            fontFamily: 'RockWell'
+            fontFamily: 'RockWell',
+            fontSize:'1.3vw'
         },
         acercaFirstDescGrid:{
             marginTop:'5%',

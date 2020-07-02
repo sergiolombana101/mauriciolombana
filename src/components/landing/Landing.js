@@ -41,12 +41,30 @@ export default class Landing extends React.Component{
 
        //GLASSES ANIMATION
        setTimeout(()=>{ //MOVE HORIZONTALLY TO THE RIGHT
-           TweenMax.to(this.glasses,1,{x:400})
+           let glasses = ReactDOM.findDOMNode(this.glasses);
+           if(glasses != null){
+               glasses.style.transition = '2s'
+               glasses.style.left = '34%'
+           }
+           let topBar =  ReactDOM.findDOMNode(this.topBar);
+           if(topBar != null){
+               topBar.style.transition = '5s';
+               topBar.style.bottom = '2352%'
+           }
+           let rightBar =  ReactDOM.findDOMNode(this.rightBar);
+           if(rightBar != null){
+               rightBar.style.transition = '5s';
+               rightBar.style.left= '1380%'
+           }
        },800)
       setTimeout(()=>{ //FIRST CIRCLE -> MOVE UP AND LEFT
-           TweenMax.to(this.handContainer,1,{opacity:1})
-           TweenMax.to(this.handContainer,1,{y:-180})
-           TweenMax.to(this.handContainer,1,{x:-210})
+           let hand = ReactDOM.findDOMNode(this.handContainer);
+           if(hand != null){
+                hand.style.transition = '1s';
+                hand.style.opacity = '1';
+                hand.style.top = '42%';
+                hand.style.left = '41%';
+           } 
        },2300)
        setTimeout(()=>{
            let hand =  ReactDOM.findDOMNode(this.hand);
@@ -68,7 +86,10 @@ export default class Landing extends React.Component{
             }
         },4500)
         setTimeout(()=>{
-            TweenMax.to(this.handContainer,2,{x:-10})
+            let hand = ReactDOM.findDOMNode(this.handContainer);
+           if(hand != null){
+                hand.style.left = '56%'
+           } 
         },5000)
         setTimeout(()=>{
             let hand =  ReactDOM.findDOMNode(this.hand);
@@ -93,26 +114,37 @@ export default class Landing extends React.Component{
             let glasses = ReactDOM.findDOMNode(this.glasses);
             if(glasses!=null){
                 glasses.style.transition = '1s';
-                TweenMax.to(this.glasses,1,{x:970,y:50});
-                TweenMax.to(this.glasses,2,{height:'2em'})
+                glasses.style.height = '3vw';
+                glasses.style.top = '40%';
+                glasses.style.left = '78%';
             }
             let hand =  ReactDOM.findDOMNode(this.hand);
             if(hand != null){
                 hand.style.transition = '1s';
                 hand.style.opacity = '0'
             }
-        },7500)
+        },7700)
 
        setTimeout(()=>{
-        TweenMax.to(this.firstName,2,{ opacity:1, x: 150,})
-        TweenMax.to(this.lastName,2,{opacity:1,x: -270})
+           let firstName = ReactDOM.findDOMNode(this.firstName);
+           if(firstName != null){
+               firstName.style.transition = '2s';
+               firstName.style.opacity = '1'
+               firstName.style.left = '12%'
+           }
+           let lastName = ReactDOM.findDOMNode(this.lastName);
+           if(lastName != null){
+               lastName.style.transition = '2s';
+               lastName.style.opacity = '1';
+               lastName.style.left = '17%';
+
+           }
         TweenMax.to(this.line,1,{opacity:1})
         setTimeout(()=>{
             TweenMax.to(this.rightBar,1,{width:'30%'})
         },1400)
        },1900)
-       TweenMax.to(this.topBar,2,{y: -458.5})
-       TweenMax.to(this.rightBar,3,{x:846})
+
    }
 
    getComponentName = (position) => {
@@ -176,7 +208,7 @@ export default class Landing extends React.Component{
                     if(elem != null){
                         elem.style.transition = '2s';
                         elem.style.transform = 'rotate(90deg)'
-                        elem.style.top = '318%';
+                        elem.style.top = '326%';
                         elem.style.left = '965%';
                         elem.style.backgroundColor = 'black';
                         elem.style.height = '59vh';
@@ -219,7 +251,7 @@ export default class Landing extends React.Component{
 
         return (
             <React.Fragment>
-                <div style={{height: '100vh', width:'100%', border:'2em solid #E0E0E0'}}>
+                <div style={{height: '100vh', width:'100%', border:'2.5vw solid #E0E0E0'}}>
                     <img src={facebook} style={this.styles.facebookLogo}></img>
                     <img src={instagram} style={this.styles.instagramLogo}></img>
                     <img src={mail} style={this.styles.mailLogo}></img>
@@ -264,8 +296,8 @@ export default class Landing extends React.Component{
                                                 Lombana
                                             </Typography>
                                         </Cell>
-                                        <Cell medium={1} style={{marginTop:'11.2%'}}>
-                                            <Typography component="span" style={{color:'black',fontSize:'3em',fontFamily:'RockWell',letterSpacing:'0.07em'}}>
+                                        <Cell medium={1} style={{marginTop:'10.8%'}}>
+                                            <Typography component="span" style={{color:'black',fontSize:'4vw',fontFamily:'RockWell',letterSpacing:'0.07em'}}>
                                                 O.D
                                             </Typography>
                                         </Cell>
@@ -373,7 +405,9 @@ export default class Landing extends React.Component{
         horizontalTopBar:{
             backgroundColor: 'black',
             height: '3vh',
-            width: '100%'
+            width: '100%',
+            position:'relative',
+            bottom:'0%'
         },
         verticalRightBarContainer:{
            position: 'absolute',
@@ -385,7 +419,9 @@ export default class Landing extends React.Component{
             backgroundColor: 'black',
             height: '92.1vh',
             width: '45%',
-            position: 'relative'
+            position: 'relative',
+            left:'0%',
+            transition:'8s'
         },
         contactDiv:{
             height: '20vh',
@@ -403,7 +439,7 @@ export default class Landing extends React.Component{
         },
         credentialsSpan:{
             color: 'black',
-            fontSize: '1em',
+            fontSize: '1.3vw',
             fontFamily: 'RockWell'
         },
         lastNameWrap:{
@@ -428,7 +464,7 @@ export default class Landing extends React.Component{
         },
         firstNameSpan:{
             color: 'black',
-            fontSize: '4em',
+            fontSize: '5vw',
             fontFamily: 'RockWell',
             letterSpacing: '0.07em',
             opacity:'0',
@@ -437,7 +473,7 @@ export default class Landing extends React.Component{
         },
         lastNameSpan:{
             color: 'black',
-            fontSize: '4em',
+            fontSize: '5vw',
             fontFamily: 'RockWell',
             letterSpacing: '0.07em',
             position: 'absolute',
@@ -458,7 +494,7 @@ export default class Landing extends React.Component{
         },
         workContactSpan:{
             color: 'white',
-            fontSize: '1.5em',
+            fontSize: '2vw',
             fontFamily:'RockWell'
         },
         address:{
@@ -467,12 +503,12 @@ export default class Landing extends React.Component{
         },
         addressSpan:{
             color: 'rgba(192,192,192,0.7)',
-            fontSize: '1.5em',
+            fontSize: '2vw',
             fontFamily:'RockWell'
         },
         phoneSpan:{
             color: 'rgba(192,192,192,0.7)',
-            fontSize: '1.5em',
+            fontSize: '2vw',
             fontFamily:'RockWell'
         },
         phoneNumber:{
@@ -487,22 +523,22 @@ export default class Landing extends React.Component{
         facebookLogo:{
             position:'absolute',
             left: '0.4%',
-            height: '1em',
-            width: '1em',
+            height: '1.5vw',
+            width: '1.5vw',
             top:'40vh'
         },
         instagramLogo:{
             position:'absolute',
             left: '0.4%',
-            height: '1em',
-            width: '1em',
+            height: '1.5vw',
+            width: '1.5vw',
             top:'45vh'
         },
         mailLogo:{
             position:'absolute',
             left: '0.4%',
-            height: '1em',
-            width: '1em',
+            height: '1.5vw',
+            width: '1.5vw',
             top:'50vh'
         },
         rightSideTopBarContainer:{
@@ -581,7 +617,9 @@ export default class Landing extends React.Component{
         },
         glasses:{
             position:'absolute',
-            top:'35%'
+            top:'35%',
+            height:'13vw',
+            left:'0'
         },
         handContainer:{
             position: 'absolute',
@@ -590,7 +628,7 @@ export default class Landing extends React.Component{
             opacity:'0'
         },
         hand:{
-            height:'7em',
+            height:'8vw',
         },
         rightCover:{
             height:'100vh',
