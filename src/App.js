@@ -6,19 +6,33 @@ import Presentacion from './components/presentacion/Presentacion';
 import Servicios from './components/servicios/Servicios';
 import Productos from './components/productos/Productos';
 import Alianzas from './components/alianzas/Alianzas';
+import {BrowserView, MobileView, isMobile} from 'react-device-detect'
+import LandingMobile from './components/Mobile/Landing/Landing';
+import Router from './components/Mobile/Router/Router';
+
 
 function App() {
 
- 
-  return (
-    <>
-    <Landing></Landing>
-    <Presentacion></Presentacion>
-    <Servicios></Servicios>
-    <Productos></Productos>
-    <Alianzas></Alianzas>
-    </>
-  );
+    if(!isMobile){
+      return (
+        <>
+            <Landing></Landing>
+            <Presentacion></Presentacion>
+            <Servicios></Servicios>
+            <Productos></Productos>
+            <Alianzas></Alianzas>
+
+        </>
+      );
+    }else{
+      return(
+        <>
+          <Router></Router>
+        </>
+      )
+
+    }
+
 }
 
 export default App;

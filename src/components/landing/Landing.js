@@ -16,6 +16,7 @@ import whatsapp from '../../assets/img/what.png'
 
 import ScriptTag from 'react-script-tag';
 
+//serve -s build
 
 export default class Landing extends React.Component{
     constructor(props){
@@ -39,6 +40,7 @@ export default class Landing extends React.Component{
     }
 
    componentDidMount(){
+      
 
        //GLASSES ANIMATION
        setTimeout(()=>{ //MOVE HORIZONTALLY TO THE RIGHT
