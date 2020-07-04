@@ -1,28 +1,36 @@
 import React from "react"
 import LandingMobile from "../Landing/Landing";
 import Navbar from "../Navbar/Navbar";
+import ServiciosMobile from "../Servicios/Servicios";
 
 
 export default class Router extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            component:'Landing'
+            component:'acerca'
         }
     }
 
     changeComponent = (component) => {
-        //this.setState({component:component})
-        console.log('change component'+component);
+        this.setState({component:component})
     }
 
     render(){
         switch(this.state.component){
-            case 'Landing':
+            case 'acerca':
                 return (
                     <>
                     <Navbar changeComponent={this.changeComponent}></Navbar>
                     <LandingMobile></LandingMobile>
+                    </>
+                )
+                break;
+            case 'servicios':
+                return (
+                    <>
+                    <Navbar changeComponent={this.changeComponent}></Navbar>
+                    <ServiciosMobile></ServiciosMobile>
                     </>
                 )
         }
