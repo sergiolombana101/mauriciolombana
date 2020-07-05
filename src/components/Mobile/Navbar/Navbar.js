@@ -11,6 +11,7 @@ export default class Navbar extends React.Component{
         this.selectedDiv = null;
         this.serviciosSpan = null;
         this.acercaSpan = null;
+        this.productosSpan = null;
     }
 
     changeComponent = (component)=>{
@@ -20,6 +21,7 @@ export default class Navbar extends React.Component{
             let selectedDiv = ReactDOM.findDOMNode(this.selectedDiv)
             let serviciosSpan = ReactDOM.findDOMNode(this.serviciosSpan)
             let acercaSpan = ReactDOM.findDOMNode(this.acercaSpan)
+            let productosSpan = ReactDOM.findDOMNode(this.productosSpan)
             switch(component){
                 case 'servicios':
                     if(grid!=null){
@@ -34,6 +36,7 @@ export default class Navbar extends React.Component{
                         selectedDiv.style.backgroundColor = '#2E294E';
                         serviciosSpan.style.color = 'white';
                         acercaSpan.style.color = 'grey'
+                        productosSpan.style.color = 'grey'
                         //scroll.scrollLeft = scroll.scrollWidth;
                     }
                     break;
@@ -49,8 +52,23 @@ export default class Navbar extends React.Component{
                         selectedDiv.style.backgroundColor = '#F0F600';
                         serviciosSpan.style.color = 'grey'
                         acercaSpan.style.color = 'black'
+                        productosSpan.style.color = 'grey'
                     }
                     break;
+                case 'productos':
+                    if(grid!=null){
+                        grid.style.transition = '1s';
+                        grid.style.backgroundColor = '#3F4045';
+                        scroll.children[0].style.transition = '1s';
+                        scroll.children[0].scrollLeft = 100;
+                        selectedDiv.style.transition = '1s';
+                        selectedDiv.style.left = '42.5%';
+                        selectedDiv.style.width = '32vw';
+                        selectedDiv.style.backgroundColor = '#30292F';
+                        serviciosSpan.style.color = 'grey'
+                        acercaSpan.style.color = 'grey'
+                        productosSpan.style.color = '#F8B007'
+                    }
     
             }
             this.props.changeComponent(component);
@@ -77,7 +95,7 @@ export default class Navbar extends React.Component{
                     </Cell>
                     <Cell small={4}>
                         <div style={this.styles.optionNonSelected}>
-                            <Typography component="span" style={this.styles.nonSelectedSpan} onClick={()=>{this.changeComponent('productos')}}>PRODUCTOS</Typography>
+                            <Typography component="span" style={this.styles.nonSelectedSpan} onClick={()=>{this.changeComponent('productos')}} ref={span=>this.productosSpan=span}>PRODUCTOS</Typography>
                         </div>
                     </Cell>
                     <Cell small={4}>
