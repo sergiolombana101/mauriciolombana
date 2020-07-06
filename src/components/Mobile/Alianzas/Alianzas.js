@@ -3,19 +3,31 @@ import ReactDOM from 'react-dom'
 import { Cell, Grid} from 'react-foundation';
 import { Typography } from "@material-ui/core";
 import pavco from '../../../assets/img/Mobile/Alianzas/pavco.png'
+import mexichem from '../../../assets/img/Mobile/Alianzas/mexichem.png'
+import natural from '../../../assets/img/Mobile/Alianzas/natural.png'
+import multiempleos from '../../../assets/img/Mobile/Alianzas/multiempleos.png'
+import cepsa from '../../../assets/img/Mobile/Alianzas/cepsa.png'
+import notaria from '../../../assets/img/Mobile/Alianzas/notaria.png'
 import cardFooter from '../../../assets/img/Mobile/Alianzas/card-footer.png'
 
 export default class AlianzasMobile extends React.Component{
     constructor(props){
         super(props);
         this.sliderDiv = null;
+        this.state = {
+            alianzaName : 'PAVCO'
+        }
         setTimeout(()=>{
             let slider = ReactDOM.findDOMNode(this.sliderDiv);
             if(slider != null){
                 slider.children[0].transition = '1s';
-                slider.children[0].scrollLeft = 50;
+                slider.children[0].scrollLeft = 280;
             }
         },10)
+    }
+
+    cardClicked = (event) => {
+        console.log(event)
     }
 
     render(){
@@ -33,10 +45,10 @@ export default class AlianzasMobile extends React.Component{
                     <Cell small={12}>
                         <div  ref={div=>this.sliderDiv = div}>
                             <Grid className="display" style={this.styles.cardSlider}>
-                                <Cell small={4} style={this.styles.card}>
+                            <Cell small={4} style={this.styles.cardLeft} >
                                 <Grid className="display">
                                         <Cell small={12}>
-                                            <img src={pavco}></img>
+                                            <img src={cepsa}></img>
                                         </Cell>
                                     </Grid>
                                     <Grid className="display" style={{marginTop:'-13%'}}>
@@ -45,7 +57,19 @@ export default class AlianzasMobile extends React.Component{
                                         </Cell>
                                     </Grid>
                                 </Cell>
-                                <Cell small={4} style={this.styles.cardPrincipal}>
+                                <Cell small={4} style={this.styles.cardLeft} onClick={()=>{this.cardClicked('mexichem')}}>
+                                <Grid className="display">
+                                        <Cell small={12}>
+                                            <img src={mexichem}></img>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'-13%'}}>
+                                        <Cell small={12}>
+                                            <img src={cardFooter}></img>
+                                        </Cell>
+                                    </Grid>
+                                </Cell>
+                                <Cell small={4} style={this.styles.cardPrincipal} onClick={()=>{this.cardClicked('pavco')}}>
                                     <Grid className="display">
                                         <Cell small={12}>
                                             <img src={pavco}></img>
@@ -57,10 +81,34 @@ export default class AlianzasMobile extends React.Component{
                                         </Cell>
                                     </Grid>
                                 </Cell>
-                                <Cell small={4} style={this.styles.card}>
+                                <Cell small={4} style={this.styles.cardRight} onClick={()=>{this.cardClicked('natural')}}>
                                 <Grid className="display">
                                         <Cell small={12}>
-                                            <img src={pavco}></img>
+                                            <img src={natural}></img>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'-13%'}}>
+                                        <Cell small={12}>
+                                            <img src={cardFooter}></img>
+                                        </Cell>
+                                    </Grid>
+                                </Cell>
+                                <Cell small={4} style={this.styles.cardRight} onClick={()=>{this.cardClicked('multiempleos')}}>
+                                <Grid className="display">
+                                        <Cell small={12}>
+                                            <img src={multiempleos}></img>
+                                        </Cell>
+                                    </Grid>
+                                    <Grid className="display" style={{marginTop:'-13%'}}>
+                                        <Cell small={12}>
+                                            <img src={cardFooter}></img>
+                                        </Cell>
+                                    </Grid>
+                                </Cell>
+                                <Cell small={4} style={this.styles.cardRight} onClick={()=>{this.cardClicked('notaria')}}>
+                                <Grid className="display">
+                                        <Cell small={12}>
+                                            <img src={notaria}></img>
                                         </Cell>
                                     </Grid>
                                     <Grid className="display" style={{marginTop:'-13%'}}>
@@ -91,11 +139,19 @@ export default class AlianzasMobile extends React.Component{
             position: 'relative',
             top: '-87%'
         },
-        card:{
+        cardLeft:{
             height: '50vw',
             backgroundColor: 'white',
             borderRadius:'.8em',
-            marginTop:'10%'
+            marginTop:'10%',
+            marginLeft:'15%'
+        },
+        cardRight:{
+            height: '50vw',
+            backgroundColor: 'white',
+            borderRadius:'.8em',
+            marginTop:'10%',
+            marginRight:'15%'
         },
         cardPrincipal:{
             height: '50vw',
@@ -105,10 +161,17 @@ export default class AlianzasMobile extends React.Component{
             marginLeft:'15%',
             marginRight:'15%'
         },
+        
         cardSlider:{
             height: '60vw',
             overflowY: 'scroll',
             flexWrap: 'initial'
+        },
+        alianzaSpan:{
+            color:'#FFCB4F',
+            fontFamily:'Verdana',
+            fontSize:'6vw',
+            fontWeight:'bold'
         }
     }
 }

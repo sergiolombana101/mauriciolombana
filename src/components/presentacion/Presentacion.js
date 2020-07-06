@@ -60,7 +60,7 @@ export default class Presentacion extends React.Component{
                                 <Cell medium={9}>
                                     <Typography component="span" style={{fontFamily:'RockWell', fontSize: '1.3vw', display: 'block', lineHeight: '135%'}} ref={span=>this.descSpan = span}>
                                         Optometra con mas de 25 años de experiencia en practica clinica ,
-                                        nuestros altos estandares de etica  nos permiten manejar su salud
+                                        con altos estandares de etica y sentido humano que nos permiten manejar su salud
                                          visual con el profesionalismo que sus ojos se merecen. 
                                     </Typography>
                                 </Cell>
@@ -73,9 +73,9 @@ export default class Presentacion extends React.Component{
                                         presbicia) disminuyan la vision o que generen sintomas como dolor
                                         de cabeza,ojo rojo,ardor,cansancio etc,siempre buscando las
                                         alternativas que nos permita darle el mejor manejo a su problema 
-                                        visual,con productos y examenes de ultima generacion,nos mantenemos 
-                                        a  la vanguardia de los adelantos en el area clinica y en los examenes
-                                        visuales especiales. 
+                                        visual. Contamos con productos , examenes y equipos  de ultima generacion
+                                        y nos  mantenemos a  la vanguardia de los adelantos en el area clinica 
+                                        ocular , mejorando continuamente pensando en su salud de sus ojos.
                                     </Typography>
                                 </Cell>
                             </Grid>

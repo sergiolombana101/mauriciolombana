@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from 'react-dom'
 import background from '../../../assets/img/Mobile/Landing/background.png';
+import presentacion from '../../../assets/img/Mobile/Landing/presentacion.png';
 import location from '../../../assets/img/Mobile/Landing/location.png';
 import phone from '../../../assets/img/Mobile/Landing/phone.png'
 import glasses from '../../../assets/img/Mobile/Landing/glasses.png';
@@ -14,7 +15,7 @@ export default class LandingMobile extends React.Component{
     }
     render(){
         return(
-            <div style={{height: '100vh', width:'100%', backgroundColor: '#141A1F'}}>
+            <div style={{height: '200vh', width:'100%', backgroundColor: '#141A1F'}}>
                 <Grid className="display">
                     <Cell small={12}>
                         <img src={background} style={this.styles.backgroundImg}></img>
@@ -73,6 +74,26 @@ export default class LandingMobile extends React.Component{
                         </Typography>
                     </Cell>
                 </Grid>
+                <Grid className="display" style={{marginTop:'10%'}}>
+                    <Cell small={12}>
+                        <img src={presentacion} style={this.styles.backgroundImg}></img>
+                    </Cell>
+                </Grid>
+                <Grid className="display" style={{marginTop:'6%'}}>
+                    <Cell small={12} style={{marginLeft:'8%'}}>
+                        <div style={{width:'84vw'}}>
+                        <Typography component="span" style={this.styles.addressSpan1}>
+                            Optometra con mas de 25 años de experiencia en practica clinica,
+                            con altos estandares de etica y sentido humano   que nos  permiten
+                            manejar su salud visual con el profesionalismo que sus ojos se merecen 
+                            y asi solucionar los casos en donde los defectos de refraccion (hipermetropia, astigmatismo, miopia, presbicia)
+                            disminuyan la vision o  generen sintomas como dolor de cabeza,ojo rojo,ardor,cansancio etc,siempre buscando
+                            las alternativas que nos permita darle el tratamiento adecuado a su problema visual.
+                        </Typography>
+                        </div>
+                    </Cell>
+                </Grid>
+                
             </div>
         )
     }

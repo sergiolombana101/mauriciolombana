@@ -13,6 +13,7 @@ import { Cell, Grid} from 'react-foundation';
 import {TweenMax, Power3, TweenLite} from "gsap";
 import IronImage from '../../assets/libs/IronImage';
 import whatsapp from '../../assets/img/what.png'
+import phone from '../../assets/img/phone.png'
 
 import ScriptTag from 'react-script-tag';
 
@@ -360,11 +361,13 @@ export default class Landing extends React.Component{
                                                 provision24@hotmail.com
                                             </Typography>
                                             <img src={whatsapp} style={{height:'1.5vw', marginTop:'-1%'}}></img>
+                                            <img src={phone} style={{height:'1.5vw',marginTop:'-1%', marginLeft:'2%'}}></img>
                                             <Typography component="span" style={this.styles.whatsapp}>
                                                 3108664214
                                             </Typography>
                                         </Cell>
                                         <Cell medium={3} style={this.styles.phoneNumber}>
+                                        <img src={phone} style={{height:'1.5vw', marginRight:'4%'}}></img>
                                             <Typography component="span" style={this.styles.phoneSpan}>
                                                 2557276
                                             </Typography>
