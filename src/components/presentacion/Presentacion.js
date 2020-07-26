@@ -59,23 +59,23 @@ export default class Presentacion extends React.Component{
                             <Grid className="display" style={this.styles.acercaFirstDescGrid}>
                                 <Cell medium={9}>
                                     <Typography component="span" style={{fontFamily:'RockWell', fontSize: '1.3vw', display: 'block', lineHeight: '135%'}} ref={span=>this.descSpan = span}>
-                                        Optometra con mas de 25 años de experiencia en practica clinica ,
-                                        con altos estandares de etica y sentido humano que nos permiten manejar su salud
-                                         visual con el profesionalismo que sus ojos se merecen. 
+                                        Optómetra con mas de 25 años de experiencia en practica clínica ,
+                                        con altos estándares de ética y sentido humano que me permiten manejar su salud
+                                        visual con el profesionalismo que sus ojos se merecen. Y asi solucionar los casos 
+                                        donde los efectos de  refracción (Hipermetropia, Astigmatismo, Miopia,
+                                        Presbicia) disminuyan la visión o generen síntomas como dolor
+                                        de cabeza,ojo rojo,ardor,cansancio etc. Siempre buscando las
+                                        alternativas que nos permitan darle el tratamiento adecuado a su problema 
+                                        visual. 
                                     </Typography>
                                 </Cell>
                             </Grid>
                             <Grid className="display" style={this.styles.acercaSecondDescGrid}>
                                 <Cell medium={9} style={{height:'22vw',overflow:'auto'}}>
                                     <Typography component="span" style={{fontFamily:'RockWell', color:'grey', fontSize: '1.3vw', lineHeight:'2%', display: 'block', lineHeight: '135%'}}>
-                                        Nuestra experiencia nos permiten solucionar los casos en donde
-                                        los defectos de refraccion (hipermetropia,astigmatismo,miopia,
-                                        presbicia) disminuyan la vision o que generen sintomas como dolor
-                                        de cabeza,ojo rojo,ardor,cansancio etc,siempre buscando las
-                                        alternativas que nos permita darle el mejor manejo a su problema 
-                                        visual. Contamos con productos , examenes y equipos  de ultima generacion
-                                        y nos  mantenemos a  la vanguardia de los adelantos en el area clinica 
-                                        ocular , mejorando continuamente pensando en su salud de sus ojos.
+                                        Contamos con productos , exámenes y equipos de ultima generación
+                                        y nos  mantenemos a  la vanguardia de los adelantos en el área clinica 
+                                        ocular , mejorando continuamente pensando en la salud de sus ojos.
                                     </Typography>
                                 </Cell>
                             </Grid>

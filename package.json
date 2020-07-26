@@ -1,5 +1,6 @@
 {
   "name": "optometra",
+  "homepage":"http://mauriciolombana.com/",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build"
   },

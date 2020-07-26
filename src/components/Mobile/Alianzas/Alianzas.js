@@ -26,9 +26,6 @@ export default class AlianzasMobile extends React.Component{
         },10)
     }
 
-    cardClicked = (event) => {
-        console.log(event)
-    }
 
     render(){
         return(

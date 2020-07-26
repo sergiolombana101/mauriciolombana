@@ -45,7 +45,7 @@ export default class LandingMobile extends React.Component{
                 <Grid className="display" style={{marginTop:'5%'}}>
                     <Cell small={9} style={{marginLeft:'6%'}}>
                         <Typography component="span" style={this.styles.addressSpan1}>
-                            Optometra de la Universidad de la Salle. Especialista en salud ocupacional y segmento anterior
+                            Optómetra de la Universidad de la Salle. Especialista en salud ocupacional y segmento anterior
                         </Typography>
                     </Cell>
                 </Grid>
@@ -80,15 +80,17 @@ export default class LandingMobile extends React.Component{
                     </Cell>
                 </Grid>
                 <Grid className="display" style={{marginTop:'6%'}}>
-                    <Cell small={12} style={{marginLeft:'8%'}}>
+                    <Cell small={11} style={{marginLeft:'8%'}}>
                         <div style={{width:'84vw'}}>
                         <Typography component="span" style={this.styles.addressSpan1}>
-                            Optometra con mas de 25 años de experiencia en practica clinica,
-                            con altos estandares de etica y sentido humano   que nos  permiten
-                            manejar su salud visual con el profesionalismo que sus ojos se merecen 
-                            y asi solucionar los casos en donde los defectos de refraccion (hipermetropia, astigmatismo, miopia, presbicia)
-                            disminuyan la vision o  generen sintomas como dolor de cabeza,ojo rojo,ardor,cansancio etc,siempre buscando
-                            las alternativas que nos permita darle el tratamiento adecuado a su problema visual.
+                                        Optómetra con mas de 25 años de experiencia en practica clínica ,
+                                        con altos estándares de ética y sentido humano que me permiten manejar su salud
+                                        visual con el profesionalismo que sus ojos se merecen. Y asi solucionar los casos 
+                                        donde los efectos de  refracción (Hipermetropia,Astigmatismo,Miopia,
+                                        Presbicia) disminuyan la visión o generen síntomas como dolor
+                                        de cabeza,ojo rojo,ardor,cansancio etc. Siempre buscando las
+                                        alternativas que nos permitan darle el tratamiento adecuado a su problema 
+                                        visual. 
                         </Typography>
                         </div>
                     </Cell>

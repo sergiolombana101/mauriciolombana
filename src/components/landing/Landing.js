@@ -152,7 +152,6 @@ export default class Landing extends React.Component{
    }
 
    getComponentName = (position) => {
-       console.log(position); //2180 2600
         /*COMPONENT IS LANDING */
         if(position > 0 && position < 390){
             return 'landing'
@@ -310,10 +309,10 @@ export default class Landing extends React.Component{
                                     <Grid className="display" style={this.styles.credentialsContainer}>
                                         <Cell medium={9} style={this.styles.credentialsCell}>
                                             <Typography component="span" style={this.styles.credentialsSpan}>
-                                                Optometra de la Universidad de la Salle<br></br>
+                                                Optómetra de la Universidad de la Salle<br></br>
                                                 Especialista en salud ocupacional y segmento anterior
-                                                Miembro del colegio Federacion Colombiana de Optometras y del concejo
-                                                tecnico nacional profesional de optometria.
+                                                Miembro del colegio Federación Colombiana de Optómetras y del Concejo
+                                                técnico Nacional Profesional de Optometría (CTNPO).
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -353,7 +352,7 @@ export default class Landing extends React.Component{
                                     <Grid className="display" style={this.styles.workContactContainer}>
                                         <Cell medium={4} style={this.styles.workContact}>
                                             <Typography component="span" style={this.styles.workContactSpan}>
-            	                                Cl. 64 #7 89, Bogota, Colombia<br></br>Únidad Medica Diagnostica<br></br> Espinosa Goméz
+            	                                Cll. 64 #7 89, Bogotá, Colombia<br></br>Únidad Medica Diagnostica<br></br> Espinosa Goméz
                                             </Typography>
                                         </Cell>
                                         <Cell medium={3} style={this.styles.address}>

@@ -57,7 +57,7 @@ export default class Productos extends React.Component{
                                     <Grid className="display">
                                         <Cell medium={12}>
                                             <Typography component="span" style={this.styles.listOption1}>
-                                                Lentes Oftalmologicos
+                                                Lentes Oftálmicos
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -87,7 +87,7 @@ export default class Productos extends React.Component{
                                         </Cell>
                                         <Cell medium={11}>
                                             <Typography component="span" style={this.styles.listOption}>
-                                                Lentes Antireflejo y Crizal 
+                                                Lentes Crizal y Antirreflejo 
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -187,7 +187,7 @@ export default class Productos extends React.Component{
                                         </Cell>
                                         <Cell medium={11}>
                                             <Typography component="span" style={this.styles.listOption}>
-                                                Lentes de Contacto Blandos cosmeticos
+                                                Lentes de Contacto Blandos cosméticos
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -207,7 +207,7 @@ export default class Productos extends React.Component{
                                         </Cell>
                                         <Cell medium={11}>
                                             <Typography component="span" style={this.styles.listOption}>
-                                                Lentes Gas Permeables Espaciales
+                                                Lentes Gas Permeables Especiales
                                             </Typography>
                                         </Cell>
                                     </Grid>
@@ -262,7 +262,7 @@ export default class Productos extends React.Component{
         },
         lineSpan:{
             backgroundColor:'#707070',
-            height: '23em',
+            height: '48em',
             width: '.2em',
             marginLeft:'1%'
         },

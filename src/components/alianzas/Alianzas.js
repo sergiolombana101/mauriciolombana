@@ -25,10 +25,14 @@ export default class Alianzas extends React.Component{
             images: [require('../../assets/img/alianzas/mexichem.png'),
                      require('../../assets/img/alianzas/pavco.png'),
                     require('../../assets/img/alianzas/natural-light.png'),
-                    require('../../assets/img/alianzas/multiempleos.png')],
+                    require('../../assets/img/alianzas/multiempleos.png'),
+                    require('../../assets/img/alianzas/notaria.png'),
+                    require('../../assets/img/alianzas/chivor.png'),
+                    require('../../assets/img/alianzas/smurfit.png'),
+                    require('../../assets/img/alianzas/cepsa.png')],
             leftText : 'MEXICHEM COLOMBIA',
             rightText : 'PAVCO',
-            texts:['MEXICHEM COLOMBIA','PAVCO','NATURAL LIGHT','MULTIEMPLEOS']
+            texts:['MEXICHEM COLOMBIA','PAVCO','NATURAL LIGHT','MULTIEMPLEOS','NOTARIA 37','AES CHIVOR','SMURFIT CAPPA','CEPSA']
             
         }
         this.listenForScroll();
@@ -43,6 +47,42 @@ export default class Alianzas extends React.Component{
     }
 
     setListeners(){
+        setInterval(()=>{
+            let leftImgCon = ReactDOM.findDOMNode(this.leftImageContainer);
+            if(leftImgCon != undefined){
+                    leftImgCon.style.transition = '1s';
+                    leftImgCon.style.left = '5%';
+                    let rightImgCon = ReactDOM.findDOMNode(this.rightImageContainer);
+                    rightImgCon.style.transition = '1s';
+                    rightImgCon.style.left = '24%';
+                    setTimeout(()=>{
+                        rightImgCon.style.opacity = '0';
+                        leftImgCon.style.opacity = '0';
+                    },500)
+                    setTimeout(()=>{
+                        leftImgCon.style.left = '65%';
+                        rightImgCon.style.left = '84%';
+                        let leftIndex = this.state.leftIndex;
+                        if(leftIndex == 0){
+                            leftIndex = this.state.images.length-2;
+                        }else{
+                            leftIndex -= 2;
+                        }
+                        let images = this.state.images;
+                        this.setState({leftImage:images[leftIndex]});
+                        this.setState({leftIndex:leftIndex});
+                        this.setState({rightImage:images[++leftIndex]});
+                        this.setState({rightIndex:leftIndex++})
+                    },1250)
+                    setTimeout(()=>{
+                        rightImgCon.style.opacity = '1';
+                        leftImgCon.style.opacity = '1';
+                        leftImgCon.style.left = '33%';
+                        rightImgCon.style.left = '52.5%';
+                        this.changeText();
+                    },1400)
+                }
+        },4000)
         setTimeout(()=>{
             let leftArrContainer = ReactDOM.findDOMNode(this.leftContainer)
             let rightArrContainer = ReactDOM.findDOMNode(this.rightContainer)
@@ -171,7 +211,7 @@ export default class Alianzas extends React.Component{
                    <Grid className="display" style={{marginTop:'4%'}}>
                        <Cell medium={4} style={{marginLeft:'37%'}}>
                            <Typography component="span" style={this.styles.alianzaTitle}>
-                               ALGUNAS DE NUESTRAS ALIANZAS ESTRATEGICAS
+                               ALGUNAS DE NUESTRAS ALIANZAS ESTRATÉGICAS
                            </Typography>
                        </Cell>
                    </Grid>
